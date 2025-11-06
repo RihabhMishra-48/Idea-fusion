@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>IdeaFusion — Hackathon | Codeshastra</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html,body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;scroll-behavior:smooth;}
+    .glass{background:linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03));backdrop-filter: blur(8px);}
+    .accent{background:linear-gradient(90deg,#7c3aed,#06b6d4);-webkit-background-clip:text;background-clip:text;color:transparent}
+  </style>
+</head>
+<body class="bg-gradient-to-b from-[#0f172a] via-[#071033] to-[#021021] text-slate-100 leading-relaxed">
+  <!-- HEADER -->
+  <header class="max-w-6xl mx-auto p-6 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <div class="w-12 h-12 rounded-lg bg-white/5 flex items-center justify-center glass">
+        <i class="fa-solid fa-lightbulb text-amber-400"></i>
+      </div>
+      <div>
+        <div class="text-sm opacity-80">Codeshastra</div>
+        <div class="text-lg font-semibold">IdeaFusion Hackathon</div>
+      </div>
+    </div>
+    <nav class="hidden md:flex gap-6 items-center opacity-90">
+      <a href="#about" class="hover:underline">About</a>
+      <a href="#whyjoin" class="hover:underline">Why Join</a>
+      <a href="#prizes" class="hover:underline">Prizes</a>
+      <a href="#rules" class="hover:underline">Rules</a>
+      <a href="#schedule" class="hover:underline">Schedule</a>
+      <a href="#register" class="px-4 py-2 rounded-md glass border border-white/10">Register</a>
+    </nav>
+  </header>
+
+  <main class="max-w-6xl mx-auto p-6 grid gap-16">
+    <!-- HERO -->
+    <section class="grid lg:grid-cols-2 gap-8 items-center">
+      <div>
+        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">IdeaFusion — <span class="accent">Ignite. Innovate. Inspire.</span></h1>
+        <p class="mt-4 text-slate-300">A national-level hybrid hackathon where creativity meets code. Collaborate, brainstorm, and bring your wildest ideas to life. Compete with the brightest minds across domains like AI, Web, IoT, and Cybersecurity.</p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="#register" class="px-5 py-3 rounded-md bg-gradient-to-r from-indigo-600 to-cyan-400 font-semibold shadow-lg">Register Now</a>
+          <span class="px-5 py-3 rounded-md glass border border-white/10">Hybrid | Offline Finals: <b>TBA</b></span>
+        </div>
+      </div>
+      <div class="text-center">
+        <img src="https://cdn-icons-png.flaticon.com/512/1055/1055646.png" alt="Hackathon Illustration" class="w-72 mx-auto" />
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="p-6 rounded-xl glass">
+      <h2 class="text-3xl font-bold mb-3">About <span class="accent">IdeaFusion</span></h2>
+      <p class="text-slate-300">IdeaFusion is Codeshastra’s flagship hackathon designed to foster innovation and problem-solving among young developers. Over 3 dynamic days, participants will brainstorm, prototype, and pitch impactful solutions to real-world challenges. Whether you're a beginner or a pro, IdeaFusion is your stage to showcase creativity and teamwork.</p>
+    </section>
+
+    <!-- WHY JOIN -->
+    <section id="whyjoin" class="grid md:grid-cols-3 gap-6">
+      <div class="p-6 rounded-xl glass">
+        <h3 class="font-semibold text-xl">💡 Innovation & Creativity</h3>
+        <p class="text-slate-300 text-sm mt-2">Turn your ideas into working prototypes while solving real problems and experimenting with emerging technologies.</p>
+      </div>
+      <div class="p-6 rounded-xl glass">
+        <h3 class="font-semibold text-xl">🤝 Networking</h3>
+        <p class="text-slate-300 text-sm mt-2">Meet developers, mentors, and recruiters from various domains. Collaborate, learn, and make long-term connections.</p>
+      </div>
+      <div class="p-6 rounded-xl glass">
+        <h3 class="font-semibold text-xl">🏆 Recognition</h3>
+        <p class="text-slate-300 text-sm mt-2">Top teams win cash prizes, certificates, internships, and exclusive opportunities to work with partner companies.</p>
+      </div>
+    </section>
+
+    <!-- PRIZES -->
+    <section id="prizes" class="p-6 rounded-xl glass">
+      <h2 class="text-3xl font-bold mb-3">🏆 Prizes & Rewards</h2>
+      <ul class="text-slate-300 space-y-2">
+        <li>🥇 Winner: ₹<span contenteditable>XX,000</span> + Trophy + Internship Opportunity</li>
+        <li>🥈 1st Runner-up: ₹<span contenteditable>XX,000</span></li>
+        <li>🥉 2nd Runner-up: ₹<span contenteditable>XX,000</span></li>
+        <li>⚡ Best Beginner Team Award</li>
+        <li>🎨 Best UI/UX Design Award</li>
+        <li>📜 Certificates for all participants</li>
+      </ul>
+    </section>
+
+    <!-- RULES -->
+    <section id="rules" class="p-6 rounded-xl glass">
+      <h2 class="text-3xl font-bold mb-3">📜 Rules & Guidelines</h2>
+      <ul class="list-disc list-inside text-slate-300 space-y-2">
+        <li>Each team can have 2–4 members.</li>
+        <li>The hackathon follows a hybrid model – online submissions and offline finals.</li>
+        <li>All projects must be original and developed during the hackathon period.</li>
+        <li>Unethical practices, plagiarism, or use of pre-built templates may lead to disqualification.</li>
+        <li>Participants must adhere to the deadlines announced by organizers.</li>
+        <li>Final decisions rest with the judging panel.</li>
+      </ul>
+    </section>
+
+    <!-- SCHEDULE -->
+    <section id="schedule" class="p-6 rounded-xl glass">
+      <h2 class="text-3xl font-bold mb-3">🗓️ Schedule</h2>
+      <ul class="text-slate-300 space-y-2">
+        <li><b>Day 1:</b> Opening Ceremony & Theme Reveal</li>
+        <li><b>Day 2:</b> Coding Marathon & Mentor Sessions</li>
+        <li><b>Day 3:</b> Final Submission, Demos & Closing Ceremony</li>
+        <li><b>Offline Finals:</b> Venue TBA</li>
+      </ul>
+    </section>
+
+    <!-- REGISTRATION -->
+    <section id="register" class="p-6 rounded-xl glass">
+      <h2 class="text-3xl font-bold mb-3">📝 Team Registration</h2>
+      <p class="text-slate-300 mt-2 text-sm">Fill out the form below to register your team. We’ll reach out to the team leader for all updates.</p>
+
+      <form id="regForm" class="mt-4 grid gap-3 md:grid-cols-2" name="submit-to-google-sheet">
+        <input name="teamName" required placeholder="Team Name" class="p-3 rounded-md bg-white/10 border border-white/10 text-white focus:outline-none" />
+        <input name="leaderName" required placeholder="Team Leader Name" class="p-3 rounded-md bg-white/10 border border-white/10 text-white focus:outline-none" />
+        <input name="leadEmail" type="email" required placeholder="Team Leader Email" class="p-3 rounded-md bg-white/10 border border-white/10 text-white focus:outline-none" />
+        <input name="college" required placeholder="College / University" class="p-3 rounded-md bg-white/10 border border-white/10 text-white focus:outline-none" />
+        <input name="members" required placeholder="Team Members (comma separated)" class="md:col-span-2 p-3 rounded-md bg-white/10 border border-white/10 text-white focus:outline-none" />
+        <input name="contact" required placeholder="Contact Number" class="p-3 rounded-md bg-white/10 border border-white/10 text-white focus:outline-none" />
+
+        <div class="md:col-span-2 flex justify-between items-center mt-2">
+          <div class="text-sm text-slate-400">By registering, you agree to follow all rules and deadlines.</div>
+          <button type="submit" class="px-5 py-2 rounded-md bg-gradient-to-r from-indigo-600 to-cyan-400 font-semibold">Submit Registration</button>
+        </div>
+      </form>
+
+      <div id="success" class="hidden mt-4 p-4 rounded-md bg-green-900/40 text-green-200">Registration successful! We’ll contact your team leader via email.</div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-8 text-center text-slate-400 text-sm">
+      Organized by <b>Codeshastra</b> • For queries: <a href="mailto:hello@codeshastra.example" class="underline">hello@codeshastra.example</a><br>
+      © 2025 IdeaFusion Hackathon — All Rights Reserved
+    </footer>
+  </main>
+
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbz05KS44wSlxkiT41dHxOzN5Tkppoz2y6CYWLQSjhgNkAlfL3-2RIxueKOB6lceqkPk/exec';
+    const form = document.forms['submit-to-google-sheet'];
+    const success = document.getElementById('success');
+`
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+          success.classList.remove('hidden');
+          form.reset();
+          setTimeout(()=> success.classList.add('hidden'), 6000);
+        })
+        .catch(error => alert('Error! ' + error.message));
+    });
+  </script>
+</body>
+</html>
