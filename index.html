@@ -77,9 +77,9 @@
     <section id="prizes" class="p-6 rounded-xl glass">
       <h2 class="text-3xl font-bold mb-3">🏆 Prizes & Rewards</h2>
       <ul class="text-slate-300 space-y-2">
-        <li>🥇 Winner: ₹<span contenteditable>XX,000</span> + Trophy + Internship Opportunity</li>
-        <li>🥈 1st Runner-up: ₹<span contenteditable>XX,000</span></li>
-        <li>🥉 2nd Runner-up: ₹<span contenteditable>XX,000</span></li>
+        <li>🥇 Winner: ₹<span contenteditable>5,000</span> + Trophy </li>
+        <li>🥈 1st Runner-up: ₹<span contenteditable>3,000</span></li>
+        <li>🥉 2nd Runner-up: ₹<span contenteditable>2,000</span></li>
         <li>⚡ Best Beginner Team Award</li>
         <li>🎨 Best UI/UX Design Award</li>
         <li>📜 Certificates for all participants</li>
@@ -115,6 +115,11 @@
       <h2 class="text-3xl font-bold mb-3">📝 Team Registration</h2>
       <p class="text-slate-300 mt-2 text-sm">Fill out the form below to register your team. We’ll reach out to the team leader for all updates.</p>
 
+       <!-- 💰 Registration Fee Notice -->
+  <div class="mt-4 p-4 bg-yellow-500/10 border border-yellow-500/30 rounded-lg text-yellow-300 text-sm">
+    💰 <b>Registration Fee:</b> ₹200 per team. Payment details will be sent to the <b>team leader’s email</b> after successful registration.
+  </div>
+
       <form id="regForm" class="mt-4 grid gap-3 md:grid-cols-2" name="submit-to-google-sheet">
         <input name="teamName" required placeholder="Team Name" class="p-3 rounded-md bg-white/10 border border-white/10 text-white focus:outline-none" />
         <input name="leaderName" required placeholder="Team Leader Name" class="p-3 rounded-md bg-white/10 border border-white/10 text-white focus:outline-none" />
@@ -139,21 +144,35 @@
     </footer>
   </main>
 
-  <script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbz05KS44wSlxkiT41dHxOzN5Tkppoz2y6CYWLQSjhgNkAlfL3-2RIxueKOB6lceqkPk/exec';
-    const form = document.forms['submit-to-google-sheet'];
-    const success = document.getElementById('success');
-`
-    form.addEventListener('submit', e => {
-      e.preventDefault();
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => {
-          success.classList.remove('hidden');
-          form.reset();
-          setTimeout(()=> success.classList.add('hidden'), 6000);
-        })
-        .catch(error => alert('Error! ' + error.message));
-    });
-  </script>
+ <script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbz05KS44wSlxkiT41dHxOzN5Tkppoz2y6CYWLQSjhgNkAlfL3-2RIxueKOB6lceqkPk/exec';
+  const form = document.forms['submit-to-google-sheet'];
+  const success = document.getElementById('success');
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+
+    // ✅ Team member validation
+    const membersInput = form.elements['members'].value.trim();
+    const membersList = membersInput.split(',').map(m => m.trim()).filter(m => m !== '');
+    const count = membersList.length;
+
+    if (count < 2 || count > 4) {
+      alert('❌ Team must have at least 2 and at most 4 members!');
+      return; // Stop submission
+    }
+
+    // ✅ Submit to Google Sheet
+    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+      .then(response => {
+        success.classList.remove('hidden');
+        form.reset();
+        setTimeout(() => success.classList.add('hidden'), 6000);
+      })
+      .catch(error => alert('Error! ' + error.message));
+  });
+</script>
+
+
 </body>
 </html>
